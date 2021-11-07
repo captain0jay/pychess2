@@ -15,7 +15,7 @@ def send(msg):
     recv_msg=client.recv(HEADER).decode(FORMAT)
     return recv_msg
 connected=True
-Send(" false")
+send(" false")
 while connected:
     recv_msg=send(input("> "))
     if recv_msg:
