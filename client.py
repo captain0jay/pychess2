@@ -22,7 +22,6 @@ while connected:
         if recv_msg==DISCONNECT_MESSAGE:
             print("you are disconnecting...\n DISCONNECTED")
             connected=False
-           
             break
         print(recv_msg)
         
