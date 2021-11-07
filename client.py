@@ -2,7 +2,7 @@ import socket
 HEADER=64
 FORMAT='utf-8'
 DISCONNECT_MESSAGE='!DISCONNECT'
-SERVER=3.134.125.175
+SERVER="3.134.125.175"
 PORT=10329
 ADDR=(SERVER,PORT)
 
@@ -15,13 +15,14 @@ def send(msg):
     recv_msg=client.recv(HEADER).decode(FORMAT)
     return recv_msg
 connected=True
+Send(" false")
 while connected:
     recv_msg=send(input("> "))
     if recv_msg:
         if recv_msg==DISCONNECT_MESSAGE:
             print("you are disconnecting...\n DISCONNECTED")
             connected=False
-            Send(" false")
+           
             break
         print(recv_msg)
         
